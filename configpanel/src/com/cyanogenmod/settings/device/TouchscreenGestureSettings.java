@@ -27,9 +27,9 @@ import android.view.MenuItem;
 import java.util.List;
 import java.util.Map;
 
-import cyanogenmod.providers.CMSettings;
+import mokee.providers.MKSettings;
 
-import org.cyanogenmod.internal.util.ScreenType;
+import org.mokee.internal.util.ScreenType;
 
 import com.cyanogenmod.settings.device.utils.Constants;
 import com.cyanogenmod.settings.device.utils.Constants.GestureCategory;
@@ -60,8 +60,8 @@ public class TouchscreenGestureSettings extends PreferenceActivity
             getListView().setPadding(0, 0, 0, 0);
         }
 
-        mHapticFeedback.setChecked(CMSettings.System.getInt(getContentResolver(),
-                CMSettings.System.TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK, 1) != 0);
+        mHapticFeedback.setChecked(MKSettings.System.getInt(getContentResolver(),
+                MKSettings.System.TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK, 1) != 0);
     }
 
     @Override
@@ -69,8 +69,8 @@ public class TouchscreenGestureSettings extends PreferenceActivity
         final String key = preference.getKey();
         if (KEY_HAPTIC_FEEDBACK.equals(key)) {
             final boolean value = (Boolean) newValue;
-            CMSettings.System.putInt(getContentResolver(),
-                    CMSettings.System.TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK, value ? 1 : 0);
+            MKSettings.System.putInt(getContentResolver(),
+                    MKSettings.System.TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK, value ? 1 : 0);
             return true;
         }
 

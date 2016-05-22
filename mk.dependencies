@@ -1,5 +1,9 @@
 [
   {
+    "repository": "android_vendor_yu_sambar",
+    "target_path": "vendor/yu/sambar"
+  },
+  {
     "repository": "android_kernel_cyanogen_msm8994",
     "target_path": "kernel/cyanogen/msm8994"
   },

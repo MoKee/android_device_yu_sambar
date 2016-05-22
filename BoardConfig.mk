@@ -66,12 +66,12 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 endif
-TARGET_KERNEL_CONFIG := cyanogenmod_sambar_defconfig
+TARGET_KERNEL_CONFIG := mokee_sambar_defconfig
 TARGET_KERNEL_SOURCE := kernel/cyanogen/msm8994
 
 # Enable DIAG on debug builds
 ifneq ($(TARGET_BUILD_VARIANT),user)
-TARGET_KERNEL_ADDITIONAL_CONFIG ?= cyanogenmod_debug_config
+TARGET_KERNEL_ADDITIONAL_CONFIG ?= mokee_debug_config
 endif
 
 # ANT+
@@ -116,10 +116,10 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
-# CM Hardware
-BOARD_USES_CYANOGEN_HARDWARE := true
+# MK Hardware
+BOARD_USES_MOKEE_HARDWARE := true
 BOARD_HARDWARE_CLASS += \
-    hardware/cyanogen/cmhw
+    hardware/mokee/mkhw
 TARGET_POWER_SET_FEATURE_LIB := libpower_set_feature
 
 # CNE and DPM
